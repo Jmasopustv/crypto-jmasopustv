@@ -48,3 +48,14 @@ class BitcoinCoreAPI:
             "id": 0,
         }
         return self.post(request)
+
+    #code added by me
+    
+    def getdifficulty(self):
+    request = {
+        "version" : "1.1",
+        "method": "getdifficulty",
+        "params": [],
+        "id": 0,
+    }
+    return self.post(request)

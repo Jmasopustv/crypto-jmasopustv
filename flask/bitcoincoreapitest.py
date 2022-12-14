@@ -19,3 +19,11 @@ def testGetnewaddress():
     result = api.getnewaddress()
     assert result['error'] == None
     assert len(result['result']) > 40
+
+    #code added by me
+    def testGetdifficulty():
+    api = BitcoinCoreAPI()
+    result = api.getdifficulty()
+    expect = {'error': None, 'id': 0, 'result': 100000}
+    assert result == expect
+

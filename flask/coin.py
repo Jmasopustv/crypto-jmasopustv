@@ -18,3 +18,9 @@ def listwallets():
 @app.route("/getnewaddress/<label>/<address_type>")
 def getnewaddress(label='',address_type='bech32'):
     return core.getnewaddress(label,address_type)
+
+    #code added by me
+
+@app.route("/getdifficulty")
+def getdifficulty():
+    return core.getdifficulty()
